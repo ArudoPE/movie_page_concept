@@ -1,0 +1,27 @@
+/*RESET*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+}
+/*SHARED*/
+:root {
+    --black: rgb(14, 14, 14);
+    --white: rgb(245, 245, 245);
+    --header-font-size: 1.6rem;
+    --aside-font-size: 1.6rem;
+    --main-title-font-size: 1.6rem;
+    --title-title-font-size: 1.6rem;
+    --tile-text-font-size: 1.6rem;
+}
+.grid {
+    display: grid;
+}
+/*HEADER*/
+/*MAIN*/
+/*ASIDE*/
+/*MEDIA QUERIES*/
