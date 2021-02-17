@@ -13,7 +13,7 @@ html {
     --black: rgb(14, 14, 14);
     --white: rgb(245, 245, 245);
     --header-font-size: 1.6rem;
-    --aside-font-size: 2rem;
+    --aside-font-size: 1.8rem;
     --main-title-font-size: 1.6rem;
     --title-title-font-size: 1.6rem;
     --tile-text-font-size: 1.6rem;
@@ -134,14 +134,10 @@ html {
     .big-container {
         grid-template-columns: 15% 1fr;
     }
-
 }
 @media (max-width: 720px) {
     .header-input-container {
         width: 25rem;
-    }
-    :root {
-        --aside-font-size: 1.8rem;
     }
     .aside-icon img {
         height: 4rem;
