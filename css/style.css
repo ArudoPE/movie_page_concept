@@ -14,9 +14,11 @@ html {
     --white: rgb(245, 245, 245);
     --header-font-size: 1.6rem;
     --aside-font-size: 1.8rem;
-    --main-title-font-size: 1.6rem;
-    --title-title-font-size: 1.6rem;
+    --main-tile-title-font-size: 2.5rem;
+    --main-overlay-title-font-size: 1.8rem;
+    --main-overlay-text-font-size: 1.5rem;
     --tile-text-font-size: 1.6rem;
+    --tile-img-width: 40rem;
 }
 .grid {
     display: grid;
@@ -86,6 +88,57 @@ html {
 /*MAIN*/
 .main {
     grid-area: main;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    width: 99%;
+    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-columns: repeat(1fr); */
+}
+/* .main-section:nth-child(2){
+    position: relative;
+    bottom: 8rem;
+}
+.main-section:nth-child(3){
+    position: relative;
+    bottom: 16rem;
+} */
+.main-tile-row {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-tile a{
+    color: var(--white);
+}
+.tile-image-container {
+    position: relative;
+    display: inline-block;
+}
+.tile-image-container img{
+    width: var(--tile-img-width);
+    display: block;
+}
+.main-tile-title {
+    font-size: var(--main-tile-title-font-size);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.main-overlay {
+    background-color: rgba(13, 158, 20,0.8);
+    width: var(--tile-img-width);
+    padding: 1rem;
+    position: absolute;
+    top: 65.5%;
+    left: 0;
+    right: 0;
+}
+.main-overlay span {
+    font-size: var(--main-overlay-text-font-size);
+}
+.main-overlay-title {
+    font-size: var(--main-overlay-title-font-size);
+    text-align: center;
+    text-decoration: underline;
 }
 /*ASIDE*/
 .aside {
@@ -118,8 +171,6 @@ html {
 .aside-bottom-icon {
     display: relative;
     bottom: 10px;
-    /*encapsular en div, para que sean dos elementosw, mandar a
-    extremeos con space between*/
 }
 /*MEDIA QUERIES*/
 @media (max-width: 1366px) {
@@ -152,6 +203,14 @@ html {
     }
     :root {
         --aside-font-size: 1.6rem;
+        --tile-img-width: 35rem;
+        --main-overlay-title-font-size: 2rem;
+        --main-overlay-text-font-size: 1.6rem;
+        --main-tile-title-font-size: 2.2rem;
+    }
+    .main-overlay {
+        top: 55%;
+        padding: 0.4rem;
     }
     .aside-icon img {
         height: 3.5rem;
@@ -166,8 +225,23 @@ html {
     }
     :root {
         --aside-font-size: 1.4rem;
+        --tile-img-width: 20rem;
+        --main-overlay-title-font-size: 1.5rem;
+        --main-overlay-text-font-size: 1.2rem;
+        --main-tile-title-font-size: 2rem;
     }
     .aside-icon img {
         height: 3rem;
+    }
+    .main-overlay {
+        top: 37%;
+        padding: 0.4rem;
+    }
+    .main-tile-row {
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-grow: 0;
+        flex-shrink: 1;
     }
 }
