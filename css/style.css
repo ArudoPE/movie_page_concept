@@ -18,7 +18,7 @@ html {
     --main-overlay-title-font-size: 1.8rem;
     --main-overlay-text-font-size: 1.5rem;
     --tile-text-font-size: 1.6rem;
-    --tile-img-width: 40rem;
+    --tile-img-width: 35rem;
 }
 .grid {
     display: grid;
@@ -31,7 +31,7 @@ html {
 }
 /*BIG CONTAINER*/
 .big-container {
-    grid-template-columns: 7% 1fr;
+    grid-template-columns: 90px 1fr;
     grid-template-rows: 70px 1fr;
     grid-template-areas:    "header header"
                             "aside main";
@@ -120,7 +120,7 @@ html {
     width: var(--tile-img-width);
     padding: 1rem;
     position: absolute;
-    top: 65.5%;
+    top: 60.5%;
     left: 0;
     right: 0;
 }
@@ -165,11 +165,6 @@ html {
     bottom: 10px;
 }
 /*MEDIA QUERIES*/
-@media (max-width: 1366px) {
-    .big-container {
-        grid-template-columns: 12% 1fr;
-    }
-}
 @media (max-width: 800px) {
     .header-input-container {
         width: 40rem;
@@ -229,7 +224,7 @@ html {
         height: 3rem;
     }
     .main-overlay {
-        top: 37.5%;
+        top: 37.6%;
         padding: 0.4rem;
     }
 }
