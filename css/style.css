@@ -36,6 +36,7 @@ html {
     grid-template-areas:    "header header"
                             "aside main";
     min-height: 100vh;
+    overflow-x: hidden;
 }
 /*HEADER*/
 .header {
@@ -92,16 +93,7 @@ html {
     margin-left: 1rem;
     width: 99%;
     grid-template-rows: repeat(3, 1fr);
-    /* grid-template-columns: repeat(1fr); */
 }
-/* .main-section:nth-child(2){
-    position: relative;
-    bottom: 8rem;
-}
-.main-section:nth-child(3){
-    position: relative;
-    bottom: 16rem;
-} */
 .main-tile-row {
     gap: 1rem;
     flex-wrap: wrap;
@@ -215,6 +207,9 @@ html {
     .aside-icon img {
         height: 3.5rem;
     }
+    .main-tile-title {
+        text-align: center;
+    }
 }
 @media (max-width: 480px) {
     .header-input-container {
@@ -236,12 +231,5 @@ html {
     .main-overlay {
         top: 37%;
         padding: 0.4rem;
-    }
-    .main-tile-row {
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-grow: 0;
-        flex-shrink: 1;
     }
 }
